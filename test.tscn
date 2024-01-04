@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlv60b2bwfanc"]
+
+[ext_resource type="Texture2D" uid="uid://c452c7o2h1otc" path="res://icon.png" id="2_ic5q5"]
+[ext_resource type="Texture2D" uid="uid://b7ixrl4x7jnb3" path="res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg" id="3_68yps"]
+[ext_resource type="PackedScene" uid="uid://c4c2ugi0b4bgv" path="res://stereo.tscn" id="4_emlqs"]
+
+[sub_resource type="Gradient" id="Gradient_ivuet"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x32c3"]
+gradient = SubResource("Gradient_ivuet")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4dgpu"]
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 9.29
+gravity = Vector3(-90, -9.8, 0)
+scale_min = 0.0
+scale_max = 16.53
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqtix"]
+size = Vector2(7918, 236)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Black-screen39" type="Sprite2D" parent="."]
+modulate = Color(0, 0.216667, 1, 1)
+position = Vector2(16010, -7762)
+scale = Vector2(57098.6, 15958.7)
+texture = SubResource("GradientTexture2D_x32c3")
+
+[node name="test" type="CharacterBody2D" parent="."]
+position = Vector2(103, 131)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="test"]
+position = Vector2(-301.3, -129.3)
+polygon = PackedVector2Array(249.3, 112.3, 241.3, 112.3, 241.3, 118.3, 240.3, 182.3, 241.3, 190.3, 314.3, 188.3, 314.3, 180.3, 314.3, 171.3, 314.3, 149.3, 314.3, 139.3, 314.3, 133.3, 313.3, 114.3, 311.3, 112.3, 311.3, 111.3, 274.3, 111.3)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="test/CollisionPolygon2D2"]
+position = Vector2(298.3, 137.3)
+remote_path = NodePath("../../../Camera2D")
+update_rotation = false
+update_scale = false
+
+[node name="Icon2" type="Sprite2D" parent="test"]
+position = Vector2(-23.9, 21.6)
+scale = Vector2(0.603361, 0.638017)
+texture = ExtResource("2_ic5q5")
+region_enabled = true
+region_rect = Rect2(256.89, 156.003, 119.052, 121.369)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="test"]
+position = Vector2(-67, 55)
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_4dgpu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(100, 139)
+offset = Vector2(0, -200)
+zoom = Vector2(1.2, 1.2)
+limit_top = -300
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3956, 316)
+shape = SubResource("RectangleShape2D_vqtix")
+
+[node name="walll" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3746.5, 804)
+scale = Vector2(9.63125, 1.5175)
+texture = ExtResource("3_68yps")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("4_emlqs")]

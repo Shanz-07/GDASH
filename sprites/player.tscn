@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhhitnoyeujpt"]
+
+[ext_resource type="Texture2D" uid="uid://cw7jkvrhuayh8" path="res://icon.svg" id="1_yq5is"]
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-0.300018, -0.300003)
+texture = ExtResource("1_yq5is")
+
+[node name="Camera2D" type="Camera2D" parent="Icon"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-301.3, -129.3)
+polygon = PackedVector2Array(248, 65, 237, 75, 237, 181, 249, 194, 353, 193, 365, 183, 366, 77, 354, 65)

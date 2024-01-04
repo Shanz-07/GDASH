@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6yeiboqdf8xt"]
+
+[ext_resource type="Texture2D" uid="uid://cw7jkvrhuayh8" path="res://icon.svg" id="1_0bql2"]
+[ext_resource type="Script" path="res://player.gd" id="1_gpohv"]
+[ext_resource type="Texture2D" uid="uid://86kxwcyfkt21" path="res://black-screen_39.png" id="2_mkqj8"]
+[ext_resource type="Texture2D" uid="uid://b7ixrl4x7jnb3" path="res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg" id="3_5qh4j"]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_gpohv")
+
+[node name="Black-screen39" type="Sprite2D" parent="."]
+position = Vector2(859, -915)
+scale = Vector2(3.89063, 2.06296)
+texture = ExtResource("2_mkqj8")
+
+[node name="3e57d7f8a24e60f5786c9f97f3Dcaf8b" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(602, 1258)
+texture = ExtResource("3_5qh4j")
+region_enabled = true
+region_rect = Rect2(-2363.15, -626.495, 4765.86, 2073.44)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(103, 137)
+texture = ExtResource("1_0bql2")
+
+[node name="Camera2D" type="Camera2D" parent="Icon"]
+position_smoothing_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(50, 73, 39, 83, 39, 190, 47, 199, 51, 201, 155, 201, 164, 196, 167, 190, 167, 134, 167, 84, 156, 73)

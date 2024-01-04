@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brbchmqvqcf24"]
+
+[ext_resource type="Texture2D" uid="uid://bpnqen1vkrir0" path="res://autodraw 11_5_2023.png" id="1_vivex"]
+
+[sub_resource type="TileSet" id="TileSet_lhyls"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lhyls")
+format = 2
+
+[node name="Autodraw1152023" type="Sprite2D" parent="."]
+position = Vector2(34, 7)
+scale = Vector2(0.107, 0.096)
+texture = ExtResource("1_vivex")

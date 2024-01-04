@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dae3dqxabo8v1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_34nrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxouo"]
+size = Vector2(63988, 4083)
+
+[node name="main wall" type="StaticBody2D"]
+modulate = Color(0, 0.0509804, 1, 1)
+
+[node name="wall" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(18291.5, 2042)
+scale = Vector2(0.63657, 1)
+texture = SubResource("CanvasTexture_34nrr")
+region_enabled = true
+region_rect = Rect2(-3296.64, -1775.83, 100000, 4097.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18448, 2040.5)
+shape = SubResource("RectangleShape2D_bxouo")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

@@ -1,0 +1,235 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdiv5k5vx1ehb"]
+
+[ext_resource type="Texture2D" uid="uid://epou7ddpt1rj" path="res://icon.png" id="3_bhqdp"]
+[ext_resource type="Script" path="res://player.gd" id="3_vv47w"]
+[ext_resource type="PackedScene" uid="uid://dae3dqxabo8v1" path="res://wall.tscn" id="3_w8esq"]
+[ext_resource type="Texture2D" uid="uid://b4sjbbgubakid" path="res://bg box.png" id="6_05c3q"]
+[ext_resource type="Texture2D" uid="uid://bpnqen1vkrir0" path="res://autodraw 11_5_2023.png" id="6_dqmyu"]
+[ext_resource type="Texture2D" uid="uid://dyhyr4ywahfvo" path="res://autodraw 11_6_2023-modified.png" id="6_sqlu6"]
+[ext_resource type="PackedScene" uid="uid://k3d6vc082dsr" path="res://ui.tscn" id="7_r8hg6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1ltmy"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y6rh3"]
+emission_shape = 1
+emission_sphere_radius = 9.29
+particle_flag_disable_z = true
+gravity = Vector3(-90, -9.8, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.0
+scale_max = 6.0
+color = Color(1, 0.133333, 1, 1)
+
+[node name="the level" type="Node2D"]
+
+[node name="Black-screen39" type="Sprite2D" parent="."]
+modulate = Color(0.376471, 0.0980392, 1, 1)
+position = Vector2(-7748, -7787.1)
+scale = Vector2(57104, 15958.2)
+texture = SubResource("CanvasTexture_1ltmy")
+
+[node name="the wall" parent="." instance=ExtResource("3_w8esq")]
+modulate = Color(0, 0.0509804, 1, 1)
+position = Vector2(-19, 200)
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(103, 131)
+script = ExtResource("3_vv47w")
+
+[node name="Icon2" type="Sprite2D" parent="player"]
+position = Vector2(-0.300018, -0.300003)
+texture = ExtResource("3_bhqdp")
+region_enabled = true
+region_rect = Rect2(256.675, 155.756, 119.327, 121.698)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="player"]
+position = Vector2(-301.3, -129.3)
+polygon = PackedVector2Array(252.3, 67.3, 240.3, 68.3, 241.3, 118.3, 240.3, 182.3, 241.3, 190.3, 360.3, 190.3, 360.3, 181.3, 360.3, 168.3, 361.3, 110.3, 361.3, 77.3, 360.3, 67.3, 280.3, 67.3)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="player/CollisionPolygon2D2"]
+position = Vector2(298.3, 137.3)
+remote_path = NodePath("../../../Camera2D")
+update_rotation = false
+update_scale = false
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="player"]
+position = Vector2(-67, 55)
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_y6rh3")
+
+[node name="Areas" type="Node2D" parent="."]
+position = Vector2(1512.1, -0.200005)
+
+[node name="area" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area"]
+polygon = PackedVector2Array(763, 131, 733, 193, 794, 193)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area"]
+position = Vector2(763.25, 161.75)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area2" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area2"]
+position = Vector2(713.1, 0.199997)
+polygon = PackedVector2Array(762.9, 131.8, 761.9, 132.8, 760.9, 134.8, 758.9, 138.8, 735.9, 186.8, 733.9, 190.8, 732.9, 192.8, 793.9, 192.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area2"]
+position = Vector2(1476.35, 161.85)
+scale = Vector2(0.10708, 0.0956589)
+texture = ExtResource("6_dqmyu")
+
+[node name="area3" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area3"]
+position = Vector2(774.1, 0.799995)
+polygon = PackedVector2Array(762.9, 130.8, 761.9, 132.8, 759.9, 137.8, 749.9, 157.8, 739.9, 177.8, 734.9, 188.8, 732.9, 192.8, 792.9, 192.8, 783.9, 172.8, 772.9, 150.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area3"]
+position = Vector2(1537.35, 162.55)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area4" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area4"]
+position = Vector2(1452.1, -0.200005)
+polygon = PackedVector2Array(762.9, 130.8, 761.9, 132.8, 759.9, 137.8, 749.9, 157.8, 739.9, 177.8, 734.9, 188.8, 732.9, 192.8, 792.9, 192.8, 783.9, 172.8, 772.9, 150.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area4"]
+position = Vector2(2215.35, 161.55)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area5" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area5"]
+position = Vector2(1392.1, -0.200005)
+polygon = PackedVector2Array(762.9, 130.8, 761.9, 132.8, 759.9, 137.8, 749.9, 157.8, 739.9, 177.8, 734.9, 188.8, 732.9, 192.8, 792.9, 192.8, 783.9, 172.8, 772.9, 150.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area5"]
+position = Vector2(2155.35, 161.55)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area6" type="Area2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/area6"]
+position = Vector2(1512.1, -0.200005)
+polygon = PackedVector2Array(762.9, 130.8, 761.9, 132.8, 759.9, 137.8, 749.9, 157.8, 739.9, 177.8, 734.9, 188.8, 732.9, 192.8, 792.9, 192.8, 783.9, 172.8, 772.9, 150.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="Areas/area6"]
+position = Vector2(2275.35, 161.55)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="static wall and obst" type="StaticBody2D" parent="Areas"]
+position = Vector2(-1512.1, 0.200005)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/static wall and obst"]
+polygon = PackedVector2Array(2795, -11, 2796, 41, 2796, 120, 2796, 164, 2795, 188, 3328, 190, 3301, 116, 2961, 116, 2957, -43, 2863, -43, 2796, -42)
+
+[node name="wall and obstacle" type="Sprite2D" parent="Areas/static wall and obst"]
+position = Vector2(3059, 76)
+scale = Vector2(0.540506, 0.356013)
+texture = ExtResource("6_sqlu6")
+
+[node name="Area2D" type="Area2D" parent="Areas/static wall and obst"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/static wall and obst/Area2D"]
+polygon = PackedVector2Array(2793, -20, 2794, 192, 3054, 191, 3331, 191, 3303, 113, 2962, 112, 2961, -30)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(100, 139)
+offset = Vector2(0, -200)
+zoom = Vector2(1.2, 1.2)
+limit_top = -300
+position_smoothing_enabled = true
+
+[node name="Bg boxes" type="Node2D" parent="."]
+modulate = Color(0, 0.141176, 0.85098, 0.980392)
+position = Vector2(-10, -21)
+
+[node name="BgBox" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox2" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox3" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox4" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox5" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox6" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox7" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox8" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox9" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(3215, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox10" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(2615, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox11" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(2015, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox12" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(1415, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="BgBox13" type="Sprite2D" parent="Bg boxes"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(815, 412)
+texture = ExtResource("6_05c3q")
+
+[node name="UI" parent="." instance=ExtResource("7_r8hg6")]
+
+[connection signal="body_entered" from="Areas/area" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/area2" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/area3" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/area4" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/area5" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/area6" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="Areas/static wall and obst/Area2D" to="player" method="_on_area_2d_body_entered"]

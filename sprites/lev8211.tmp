@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdiv5k5vx1ehb"]
+
+[ext_resource type="Texture2D" uid="uid://86kxwcyfkt21" path="res://black-screen_39.png" id="1_banne"]
+[ext_resource type="Script" path="res://player.gd" id="3_vv47w"]
+[ext_resource type="PackedScene" uid="uid://dae3dqxabo8v1" path="res://wall.tscn" id="3_w8esq"]
+[ext_resource type="Texture2D" uid="uid://bpnqen1vkrir0" path="res://autodraw 11_5_2023.png" id="6_dqmyu"]
+[ext_resource type="Texture2D" uid="uid://cw7jkvrhuayh8" path="res://icon.svg" id="8_ewfss"]
+
+[node name="the level" type="Node2D"]
+
+[node name="Black-screen39" type="Sprite2D" parent="."]
+position = Vector2(-9950.5, -15919)
+scale = Vector2(112.901, 29.8648)
+texture = ExtResource("1_banne")
+
+[node name="the wall" parent="." instance=ExtResource("3_w8esq")]
+position = Vector2(-19, 200)
+
+[node name="player" type="CharacterBody2D" parent="."]
+script = ExtResource("3_vv47w")
+
+[node name="Icon2" type="Sprite2D" parent="player"]
+position = Vector2(-0.300018, -0.300003)
+texture = ExtResource("8_ewfss")
+
+[node name="Camera2D" type="Camera2D" parent="player/Icon2"]
+zoom = Vector2(0.6, 0.6)
+position_smoothing_enabled = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="player"]
+position = Vector2(-301.3, -129.3)
+polygon = PackedVector2Array(248, 65, 237, 75, 237, 181, 249, 194, 353, 193, 365, 183, 366, 77, 354, 65)
+
+[node name="Timer2" type="Timer" parent="player"]
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area"]
+polygon = PackedVector2Array(763, 131, 733, 193, 794, 193)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="area"]
+position = Vector2(763.25, 161.75)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area2" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area2"]
+position = Vector2(713.1, 0.199997)
+polygon = PackedVector2Array(762.9, 131.8, 761.9, 132.8, 760.9, 134.8, 758.9, 138.8, 735.9, 186.8, 733.9, 190.8, 732.9, 192.8, 793.9, 192.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="area2"]
+position = Vector2(1476.35, 161.95)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[node name="area3" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area3"]
+position = Vector2(774.1, 0.799995)
+polygon = PackedVector2Array(762.9, 130.8, 761.9, 132.8, 759.9, 137.8, 749.9, 157.8, 739.9, 177.8, 734.9, 188.8, 732.9, 192.8, 792.9, 192.8, 783.9, 172.8, 772.9, 150.8)
+
+[node name="Autodraw1152023" type="Sprite2D" parent="area3"]
+position = Vector2(1537.35, 162.55)
+scale = Vector2(0.10708, 0.0953488)
+texture = ExtResource("6_dqmyu")
+
+[connection signal="timeout" from="player/Timer2" to="player" method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="area" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="area2" to="player" method="_on_area_body_entered"]
+[connection signal="body_entered" from="area3" to="player" method="_on_area_body_entered"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://k3d6vc082dsr"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 26.0
+offset_right = 111.0
+offset_bottom = 41.0
+text = "ATTEMPT 1"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.16155, 1.02372)

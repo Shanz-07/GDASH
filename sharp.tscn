@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://diae7rl0yfm0k"]
+
+[ext_resource type="Texture2D" uid="uid://bpnqen1vkrir0" path="res://autodraw 11_5_2023.png" id="1_afjtn"]
+[ext_resource type="Script" path="res://Area2D.gd" id="2_ws115"]
+
+[node name="obstacle" type="StaticBody2D"]
+
+[node name="tri" type="Sprite2D" parent="."]
+position = Vector2(481, -55)
+scale = Vector2(0.165487, 0.172868)
+texture = ExtResource("1_afjtn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(481, -112, 434, 1, 434, 2, 527, 2, 528, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_ws115")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(481, -112, 433, 2, 434, 3, 527, 2, 529, -1)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
