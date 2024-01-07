@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dei3afmyyy6x8" path="res://Mblock5.png" id="14_txq5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bame0"]
-size = Vector2(17815, 917)
+size = Vector2(17815, 913)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4rwk"]
 size = Vector2(49, 48)
@@ -33,7 +33,7 @@ scale_min = 0.0
 scale_max = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twbmv"]
-size = Vector2(44.6278, 48)
+size = Vector2(44.4457, 48.063)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qf16e"]
 texture = ExtResource("6_io3op")
@@ -3287,7 +3287,7 @@ metadata/_edit_horizontal_guides_ = []
 [node name="ground" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
-position = Vector2(5939.5, 672.5)
+position = Vector2(5939, 672.51)
 shape = SubResource("RectangleShape2D_bame0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -3302,11 +3302,11 @@ scale = Vector2(2, 2.12533)
 texture = ExtResource("2_d7fev")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 5.0
-offset_top = -27.0
-offset_right = 547.0
-offset_bottom = 107.0
-theme_override_colors/font_color = Color(0.588235, 1, 0, 0.666667)
+offset_left = 263.0
+offset_top = -126.0
+offset_right = 805.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0.862745, 0.301961, 0.12549, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.176471, 0.188235, 1)
 theme_override_fonts/font = ExtResource("2_hca51")
 theme_override_font_sizes/font_size = 100
@@ -3348,7 +3348,7 @@ fixed_fps = 165
 position = Vector2(-0.199997, 12)
 
 [node name="CollisionPolygon2D3" type="CollisionShape2D" parent="player/areaa"]
-position = Vector2(-24.5, 40.937)
+position = Vector2(-24.4, 40.9685)
 scale = Vector2(1.09797, 1)
 shape = SubResource("RectangleShape2D_twbmv")
 
