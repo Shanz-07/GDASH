@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704650256
+::res://::1704721110
 1-02. Stereo Madness.mp3::AudioStreamMP3::2976448893064073268::1704298636::1704298636::1::::<><>::
 3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg::CompressedTexture2D::4650406175116953434::1704298636::1704298636::1::::<><>::
 Area2D.gd::GDScript::-1::1704298636::0::1::::<>Area2D<>::
@@ -18,7 +18,7 @@ ground-long.png::CompressedTexture2D::7686613499805590943::1704298636::170429863
 icon.png::CompressedTexture2D::6871893799515054816::1704298636::1704298636::1::::<><>::
 icon.svg::CompressedTexture2D::6383621456023605327::1704298636::1704298636::1::::<><>::
 level.gd::GDScript::-1::1704298636::0::1::::<>Node2D<>::
-level.tscn::PackedScene::5001252123561560415::1704643240::0::1::::<><>::uid://d0micvgvofe0o::::res://background-2.png<>uid://swfbqrv4tjl3::::res://Techno.ttf<>uid://c452c7o2h1otc::::res://icon.png<>res://player.gd<>res://Camera2D.gd<>uid://b8qpyegfa7qdp::::res://Nspike1.png<>uid://c4ux30e066sw6::::res://NHalfspike1.png<>uid://c4c2ugi0b4bgv::::res://stereo.tscn<>uid://dhrpnv6hxsc1d::::res://ground-long.png<>uid://diy4yid8hbrme::::res://Nblock1.png<>uid://b4i1stkxfvdno::::res://Lspike1.png<>uid://d4hrr282dkbki::::res://Mblock8.png<>uid://c50avjnbh2uuw::::res://NHalfblock1.png<>uid://gvbnton47mwy::::res://Mblock3.png<>uid://bdduu1qynia10::::res://Mblock7.png<>uid://b0g2uimgfue6f::::res://Mblock2.png<>uid://dei3afmyyy6x8::::res://Mblock5.png
+level.tscn::PackedScene::5001252123561560415::1704650710::0::1::::<><>::uid://d0micvgvofe0o::::res://background-2.png<>uid://swfbqrv4tjl3::::res://Techno.ttf<>uid://c452c7o2h1otc::::res://icon.png<>res://player.gd<>res://Camera2D.gd<>uid://b8qpyegfa7qdp::::res://Nspike1.png<>uid://c4ux30e066sw6::::res://NHalfspike1.png<>uid://c4c2ugi0b4bgv::::res://stereo.tscn<>uid://dhrpnv6hxsc1d::::res://ground-long.png<>uid://diy4yid8hbrme::::res://Nblock1.png<>uid://b4i1stkxfvdno::::res://Lspike1.png<>uid://d4hrr282dkbki::::res://Mblock8.png<>uid://c50avjnbh2uuw::::res://NHalfblock1.png<>uid://gvbnton47mwy::::res://Mblock3.png<>uid://bdduu1qynia10::::res://Mblock7.png<>uid://b0g2uimgfue6f::::res://Mblock2.png<>uid://dei3afmyyy6x8::::res://Mblock5.png
 lightts.png::CompressedTexture2D::6371982919597072783::1704298636::1704298636::1::::<><>::
 Lspike1.png::CompressedTexture2D::4440023971774957228::1704298636::1704298636::1::::<><>::
 Mblock2.png::CompressedTexture2D::4155203554855601891::1704370606::1704370606::1::::<><>::
@@ -36,10 +36,10 @@ player.tscn::PackedScene::7665554972377679253::1704298636::0::1::::<><>::uid://c
 sharp.tscn::PackedScene::7721073724617554708::1704298636::0::1::::<><>::uid://bpnqen1vkrir0::::res://autodraw 11_5_2023.png<>res://Area2D.gd
 spritesheet.png::CompressedTexture2D::6774923733413707581::1704298636::1704298636::1::::<><>::
 stereo.gd::GDScript::-1::1704298636::0::1::::<>RefCounted<>::
-stereo.tscn::PackedScene::6814121991716952573::1704643201::0::1::::<><>::uid://bin2xch84y2n5::::res://1-02. Stereo Madness.mp3
+stereo.tscn::PackedScene::6814121991716952573::1704650688::0::1::::<><>::uid://bin2xch84y2n5::::res://1-02. Stereo Madness.mp3
 Techno.ttf::FontFile::1309121734460567806::1704298636::1704298636::1::::<><>::
 test.gd::GDScript::-1::1704298636::0::1::::<>CharacterBody2D<>::
-test.tscn::PackedScene::7976618229864398628::1704643200::0::1::::<><>::uid://c452c7o2h1otc::::res://icon.png<>uid://b7ixrl4x7jnb3::::res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg<>uid://c4c2ugi0b4bgv::::res://stereo.tscn
+test.tscn::PackedScene::7976618229864398628::1704650687::0::1::::<><>::uid://c452c7o2h1otc::::res://icon.png<>uid://b7ixrl4x7jnb3::::res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg<>uid://c4c2ugi0b4bgv::::res://stereo.tscn
 the_level.tscn::PackedScene::7975665686454593311::1704298636::0::1::::<><>::uid://cdiv5k5vx1ehb::::res://level.tscn
 ThornPit06.webp::CompressedTexture2D::9099391441168741::1704369757::1704369758::1::::<><>::
 tile.tscn::PackedScene::3581829993809261559::1704298636::0::1::::<><>::uid://bpnqen1vkrir0::::res://autodraw 11_5_2023.png

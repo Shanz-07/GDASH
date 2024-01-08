@@ -23,10 +23,10 @@ func _process(delta):
 
 func _on_areaa_body_entered(body):
 	if body.is_in_group("spikes"):
-		$"../AudioStreamPlayer".stop()
+		position=Vector2(100,139)
 		$"../Label".set_text("Attempt "+str(count))
 		count+=1
-		position=Vector2(100,139)
+		
 		print("yes")
 	pass # Replace with function body.
 
