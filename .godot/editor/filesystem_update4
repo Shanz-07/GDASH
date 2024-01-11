@@ -1,4 +1,6 @@
-res://test.tscn
+res://Background-2.gd
 res://level.tscn
+res://test.tscn
 res://stereo.tscn
+res://Ground-long.gd
 res://player.gd

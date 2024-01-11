@@ -1,6 +1,6 @@
-TileMap
 CollisionShape2D
 Area2D
+TileMap
 ParallaxLayer
 ParallaxBackground
 Sprite2D
