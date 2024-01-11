@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlv60b2bwfanc"]
+[gd_scene load_steps=9 format=3 uid="uid://dlv60b2bwfanc"]
 
+[ext_resource type="Script" path="res://test.gd" id="1_k27xp"]
 [ext_resource type="Texture2D" uid="uid://c452c7o2h1otc" path="res://icon.png" id="2_ic5q5"]
 [ext_resource type="Texture2D" uid="uid://b7ixrl4x7jnb3" path="res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg" id="3_68yps"]
 [ext_resource type="PackedScene" uid="uid://c4c2ugi0b4bgv" path="res://stereo.tscn" id="4_emlqs"]
@@ -10,12 +11,10 @@
 gradient = SubResource("Gradient_ivuet")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4dgpu"]
+particle_flag_disable_z = true
 emission_shape = 2
 emission_sphere_radius = 9.29
-particle_flag_disable_z = true
 gravity = Vector3(-90, -9.8, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
 scale_min = 0.0
 scale_max = 16.53
 
@@ -32,6 +31,7 @@ texture = SubResource("GradientTexture2D_x32c3")
 
 [node name="test" type="CharacterBody2D" parent="."]
 position = Vector2(103, 131)
+script = ExtResource("1_k27xp")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="test"]
 position = Vector2(-301.3, -129.3)
