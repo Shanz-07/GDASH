@@ -8,5 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$".".position.x+=700*delta
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property($".","scale",Vector2(0,0),1)
 	pass

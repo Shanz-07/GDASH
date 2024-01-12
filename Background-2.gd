@@ -17,3 +17,15 @@ func _on_area_2d_body_entered(body):
 	
 	
 	pass # Replace with function body.
+
+
+func _on_area_2d_3_body_entered(body):
+	var tween = get_tree().create_tween()
+	tween.tween_property($".","modulate",Color.BLACK,1)
+	pass # Replace with function body.
+
+
+func _on_area_2d_4_body_entered(body):
+	var tween = get_tree().create_tween()
+	tween.tween_property($".","modulate",Color.DEEP_PINK,1)
+	pass # Replace with function body.
