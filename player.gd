@@ -8,7 +8,7 @@ var target_angle=179
 var rotate0=true
 var fly = false
 var music = true
-
+var jump2=false
 
 
 
@@ -17,10 +17,12 @@ func _ready():
 	pass
 	
 func _process(delta):
+	position.x+=600*delta
+	print(rotation_degrees)
 	
-	print(Engine.get_frames_per_second())
 	
-	print(fly)
+	
+	
 	
 	if not is_on_floor() and fly==false:
 		velocity.y += gravity * delta
@@ -34,16 +36,8 @@ func _process(delta):
 	
 	
 	if is_on_floor() and Input.is_action_pressed("up") and  fly==false:
-		if rotation_degrees==0:
-			var tween=create_tween()
-			tween.tween_property($".","rotation",deg_to_rad(180),0.3)
-			velocity.y = -jump_speed
-			print($".".position.y)
-		move_and_slide()
-		if rotation_degrees<-90:
-			var tween=create_tween()
-			tween.tween_property($".","rotation",deg_to_rad(0),0.6)
-			velocity.y = -jump_speed
+		
+			velocity.y=-jump_speed
 	move_and_slide()
 
 func _on_areaa_body_entered(body):
@@ -66,11 +60,17 @@ func _on_areaa_body_entered(body):
 	if music==false :
 		music=true
 func _on_area_2d_2_body_entered(body):
+	$CollisionPolygon2D2.position=Vector2(20,27)
+	$areaa/CollisionPolygon2D3.position=Vector2(0,62)
 	$Icon2.set_texture(load("res://rocket (2).png"))
 	fly=true	
-	
+	$"../Camera2D".limit_bottom=1
 	pass # Replace with function body.
 func _on_area_2d_2_body_exited(body):
+	$CollisionPolygon2D2.position=Vector2(2,10)
+	$areaa/CollisionPolygon2D3.position=Vector2(-18.799,48.016)
+	$Icon2.set_texture(load("res://icon.png"))
+	$"../Camera2D".limit_bottom=350
 	fly=false
 	
 	pass # Replace with function body.
@@ -80,6 +80,7 @@ func _on_audio_stream_player_2d_finished():
 	$"../AudioStreamPlayer".play()
 	
 	pass # Replace with function body.
+
 
 
 

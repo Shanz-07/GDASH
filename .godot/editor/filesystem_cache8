@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705061029
+::res://::1705321108
 1-02. Stereo Madness.mp3::AudioStreamMP3::2976448893064073268::1704968283::1704968283::1::::<><>::
 3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg::CompressedTexture2D::4650406175116953434::1704968283::1704968283::1::::<><>::
+AnimationPlayer.gd::GDScript::-1::1705121350::0::1::::<>AnimationPlayer<>::
 Area2D.gd::GDScript::-1::1704968283::0::1::::<>Area2D<>::
 Attm.gd::GDScript::-1::1704968283::0::1::::<>CanvasLayer<>::
 autodraw 11_5_2023 (1).png::CompressedTexture2D::5336439604299064635::1704968283::1704968283::1::::<><>::
@@ -22,7 +23,7 @@ ground-long.png::CompressedTexture2D::7686613499805590943::1704968283::170496828
 icon.png::CompressedTexture2D::6871893799515054816::1705039855::1705039855::1::::<><>::
 icon.svg::CompressedTexture2D::6383621456023605327::1704968283::1704968283::1::::<><>::
 level.gd::GDScript::-1::1704968283::0::1::::<>Node2D<>::
-level.tscn::PackedScene::5001252123561560415::1705060755::0::1::::<><>::uid://d0micvgvofe0o::::res://background-2.png<>uid://swfbqrv4tjl3::::res://Techno.ttf<>res://Background-2.gd<>uid://c452c7o2h1otc::::res://icon.png<>res://player.gd<>res://Camera2D.gd<>uid://b8qpyegfa7qdp::::res://Nspike1.png<>res://GPUParticles2D.gd<>uid://c4ux30e066sw6::::res://NHalfspike1.png<>uid://c4c2ugi0b4bgv::::res://stereo.tscn<>uid://dhrpnv6hxsc1d::::res://ground-long.png<>res://Ground-long.gd<>uid://diy4yid8hbrme::::res://Nblock1.png<>uid://b4i1stkxfvdno::::res://Lspike1.png<>uid://d4hrr282dkbki::::res://Mblock8.png<>uid://c50avjnbh2uuw::::res://NHalfblock1.png<>uid://gvbnton47mwy::::res://Mblock3.png<>uid://bdduu1qynia10::::res://Mblock7.png<>uid://b0g2uimgfue6f::::res://Mblock2.png<>uid://dei3afmyyy6x8::::res://Mblock5.png<>uid://bsuonmg5jvdc1::::res://geometry-dash-death-sound-effect_C4wQxVvI.mp3
+level.tscn::PackedScene::5001252123561560415::1705321085::0::1::::<><>::uid://d0micvgvofe0o::::res://background-2.png<>uid://swfbqrv4tjl3::::res://Techno.ttf<>res://Background-2.gd<>uid://c452c7o2h1otc::::res://icon.png<>res://player.gd<>res://Camera2D.gd<>uid://b8qpyegfa7qdp::::res://Nspike1.png<>res://GPUParticles2D.gd<>uid://c4ux30e066sw6::::res://NHalfspike1.png<>uid://c4c2ugi0b4bgv::::res://stereo.tscn<>uid://dhrpnv6hxsc1d::::res://ground-long.png<>res://Ground-long.gd<>uid://diy4yid8hbrme::::res://Nblock1.png<>uid://b4i1stkxfvdno::::res://Lspike1.png<>uid://d4hrr282dkbki::::res://Mblock8.png<>uid://c50avjnbh2uuw::::res://NHalfblock1.png<>uid://gvbnton47mwy::::res://Mblock3.png<>uid://bdduu1qynia10::::res://Mblock7.png<>uid://b0g2uimgfue6f::::res://Mblock2.png<>uid://dei3afmyyy6x8::::res://Mblock5.png<>uid://bsuonmg5jvdc1::::res://geometry-dash-death-sound-effect_C4wQxVvI.mp3
 lightts.png::CompressedTexture2D::6371982919597072783::1704968283::1704968283::1::::<><>::
 Lspike1.png::CompressedTexture2D::4440023971774957228::1704968283::1704968283::1::::<><>::
 Mblock2.png::CompressedTexture2D::4155203554855601891::1704968283::1704968283::1::::<><>::
@@ -35,17 +36,17 @@ NHalfblock1.png::CompressedTexture2D::6930154114899154358::1704968283::170496828
 NHalfspike1.png::CompressedTexture2D::6851053201474825819::1704968283::1704968283::1::::<><>::
 Nspike1.png::CompressedTexture2D::4736636401349021141::1704968283::1704968283::1::::<><>::
 OIP.jpg::CompressedTexture2D::6568580486060207676::1704968283::1704968283::1::::<><>::
-player.gd::GDScript::-1::1705060659::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1705321047::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::7665554972377679253::1704968283::0::1::::<><>::uid://cw7jkvrhuayh8::::res://icon.svg
 R (1).png::CompressedTexture2D::545065274677711056::1704968283::1704968283::1::::<><>::
 rocket (2).png::CompressedTexture2D::6014266800193159797::1705040188::1705040206::1::::<><>::
 sharp.tscn::PackedScene::7721073724617554708::1704968283::0::1::::<><>::uid://bpnqen1vkrir0::::res://autodraw 11_5_2023.png<>res://Area2D.gd
 spritesheet.png::CompressedTexture2D::6774923733413707581::1704968283::1704968283::1::::<><>::
 stereo.gd::GDScript::-1::1704968283::0::1::::<>RefCounted<>::
-stereo.tscn::PackedScene::6814121991716952573::1705060633::0::1::::<><>::uid://bin2xch84y2n5::::res://1-02. Stereo Madness.mp3
+stereo.tscn::PackedScene::6814121991716952573::1705321084::0::1::::<><>::uid://bin2xch84y2n5::::res://1-02. Stereo Madness.mp3
 Techno.ttf::FontFile::1309121734460567806::1704968283::1704968283::1::::<><>::
-test.gd::GDScript::-1::1704973576::0::1::::<>CharacterBody2D<>::
-test.tscn::PackedScene::7976618229864398628::1705060633::0::1::::<><>::res://test.gd<>uid://c452c7o2h1otc::::res://icon.png<>uid://b7ixrl4x7jnb3::::res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg<>uid://c4c2ugi0b4bgv::::res://stereo.tscn
+test.gd::GDScript::-1::1705123968::0::1::::<>CharacterBody2D<>::
+test.tscn::PackedScene::7976618229864398628::1705321084::0::1::::<><>::res://test.gd<>uid://c452c7o2h1otc::::res://icon.png<>uid://b7ixrl4x7jnb3::::res://3e57d7f8a24e60f5786c9f97f3dcaf8b.jpg<>uid://c4c2ugi0b4bgv::::res://stereo.tscn
 the_level.tscn::PackedScene::7975665686454593311::1704968283::0::1::::<><>::uid://cdiv5k5vx1ehb::::res://level.tscn
 ThornPit06.webp::CompressedTexture2D::9099391441168741::1704968283::1704968283::1::::<><>::
 tile.tscn::PackedScene::3581829993809261559::1704968283::0::1::::<><>::uid://bpnqen1vkrir0::::res://autodraw 11_5_2023.png
