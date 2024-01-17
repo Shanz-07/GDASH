@@ -65,6 +65,8 @@ func _on_area_2d_2_body_entered(body):
 	$Icon2.set_texture(load("res://rocket (2).png"))
 	fly=true	
 	$"../Camera2D".limit_bottom=1
+	$"../Camera2D".zoom.x=1.85
+	$"../Camera2D".zoom.y=1.85
 	pass # Replace with function body.
 func _on_area_2d_2_body_exited(body):
 	$CollisionPolygon2D2.position=Vector2(2,10)
@@ -72,6 +74,8 @@ func _on_area_2d_2_body_exited(body):
 	$Icon2.set_texture(load("res://icon.png"))
 	$"../Camera2D".limit_bottom=350
 	fly=false
+	$"../Camera2D".zoom.x=2
+	$"../Camera2D".zoom.y=2
 	
 	pass # Replace with function body.
 
