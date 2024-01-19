@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://cdiv5k5vx1ehb"]
+[gd_scene load_steps=57 format=3 uid="uid://cdiv5k5vx1ehb"]
 
 [ext_resource type="Texture2D" uid="uid://d0micvgvofe0o" path="res://background-2.png" id="2_d7fev"]
 [ext_resource type="FontFile" uid="uid://swfbqrv4tjl3" path="res://Techno.ttf" id="2_hca51"]
 [ext_resource type="Script" path="res://Background-2.gd" id="2_nb5bi"]
+[ext_resource type="FontFile" uid="uid://cwho0ek1f7evx" path="res://OXYGENE1.TTF" id="3_87qbn"]
 [ext_resource type="Texture2D" uid="uid://c452c7o2h1otc" path="res://icon.png" id="3_bhqdp"]
 [ext_resource type="Script" path="res://player.gd" id="3_vv47w"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="5_7chr5"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b0g2uimgfue6f" path="res://Mblock2.png" id="13_koxnh"]
 [ext_resource type="Texture2D" uid="uid://dei3afmyyy6x8" path="res://Mblock5.png" id="14_txq5w"]
 [ext_resource type="AudioStream" uid="uid://bsuonmg5jvdc1" path="res://geometry-dash-death-sound-effect_C4wQxVvI.mp3" id="20_riwyv"]
+[ext_resource type="Texture2D" uid="uid://c6ttec0bp4e4l" path="res://levelSelectorButton.png" id="22_ruv5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bame0"]
 size = Vector2(17815, 913)
@@ -4051,7 +4053,7 @@ size = Vector2(27, 540)
 
 [sub_resource type="Animation" id="Animation_pkc3t"]
 resource_name = "jump"
-length = 0.5
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -4059,7 +4061,7 @@ tracks/0/path = NodePath("player:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 3.14159]
@@ -4072,7 +4074,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_lhbbb"]
 resource_name = "jump2nd"
-length = 0.5
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -4080,7 +4082,7 @@ tracks/0/path = NodePath("player:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [3.14159, 6.28319]
@@ -4096,6 +4098,8 @@ size = Vector2(22, 251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ot85n"]
 size = Vector2(60, 529)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lmd22"]
 
 [node name="the level" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
@@ -4126,7 +4130,7 @@ offset_left = 263.0
 offset_top = -126.0
 offset_right = 805.0
 offset_bottom = 8.0
-theme_override_colors/font_color = Color(0.862745, 0, 0.12549, 1)
+theme_override_colors/font_color = Color(0.972549, 0, 0.14902, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.176471, 0.188235, 1)
 theme_override_fonts/font = ExtResource("2_hca51")
 theme_override_font_sizes/font_size = 100
@@ -4141,12 +4145,6 @@ script = ExtResource("3_vv47w")
 position = Vector2(2, 10)
 shape = SubResource("RectangleShape2D_j4rwk")
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="player/CollisionPolygon2D2"]
-position = Vector2(187.7, -4.937)
-remote_path = NodePath("../../../Camera2D")
-update_rotation = false
-update_scale = false
-
 [node name="Icon2" type="Sprite2D" parent="player"]
 texture_repeat = 2
 position = Vector2(12, 30.65)
@@ -4155,6 +4153,7 @@ texture = ExtResource("3_bhqdp")
 region_rect = Rect2(256.89, 156.003, 119.052, 121.369)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="player"]
+visible = false
 position = Vector2(-30.0004, 21.65)
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_y6rh3")
@@ -4175,8 +4174,8 @@ scale = Vector2(1.09797, 1)
 shape = SubResource("RectangleShape2D_twbmv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(289.7, 144.063)
-zoom = Vector2(2, 2)
+position = Vector2(-5197, -14)
+zoom = Vector2(1.5, 1.5)
 limit_top = -576
 limit_bottom = 350
 limit_smoothed = true
@@ -4275,6 +4274,83 @@ shape = SubResource("RectangleShape2D_bp6k7")
 position = Vector2(28095, -176.5)
 shape = SubResource("RectangleShape2D_ot85n")
 
+[node name="menu screen" type="Node2D" parent="."]
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="menu screen"]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="menu screen/ParallaxBackground3"]
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Background-2" type="Sprite2D" parent="menu screen/ParallaxBackground3/ParallaxLayer"]
+modulate = Color(0, 0.588235, 1, 1)
+position = Vector2(-5765, -182.5)
+scale = Vector2(2, 2.12533)
+texture = ExtResource("2_d7fev")
+script = ExtResource("2_nb5bi")
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="menu screen"]
+layer = 0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="menu screen/ParallaxBackground4"]
+motion_mirroring = Vector2(2672, 0)
+
+[node name="Ground-long" type="Sprite2D" parent="menu screen/ParallaxBackground4/ParallaxLayer"]
+modulate = Color(0.290196, 0.203922, 0.780392, 1)
+position = Vector2(-5770, 619)
+scale = Vector2(0.522461, 1.5752)
+texture = ExtResource("8_opbq7")
+script = ExtResource("9_0o4gw")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -5298.0
+offset_top = -26.0
+offset_right = -4976.0
+offset_bottom = 296.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("22_ruv5g")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -5810.0
+offset_top = -335.0
+offset_right = -4500.0
+offset_bottom = -62.0
+theme_override_colors/font_color = Color(0, 0.85098, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.141176, 1)
+theme_override_fonts/font = ExtResource("3_87qbn")
+theme_override_font_sizes/font_size = 180
+text = "GODOT DASH"
+
+[node name="pause" type="Node2D" parent="."]
+position = Vector2(-9661, -168)
+
+[node name="Label" type="Label" parent="pause"]
+offset_left = -163.0
+offset_top = -13.0
+offset_right = 479.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_87qbn")
+theme_override_font_sizes/font_size = 50
+text = "PRESS TAB TO RESUME "
+
+[node name="TextureRect" type="TextureRect" parent="pause"]
+modulate = Color(0.105882, 0.105882, 0.105882, 0.639216)
+offset_left = -203.0
+offset_top = -86.0
+offset_right = 1184.0
+offset_bottom = 575.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CanvasTexture_lmd22")
+
+[node name="button2" type="Button" parent="pause"]
+offset_left = 77.0
+offset_top = 51.0
+offset_right = 399.0
+offset_bottom = 414.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("22_ruv5g")
+
 [connection signal="body_entered" from="player/areaa" to="player" method="_on_areaa_body_entered"]
 [connection signal="body_entered" from="Area2D" to="ParallaxBackground/ParallaxLayer/Background-2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="ParallaxBackground2/ParallaxLayer/Ground-long" method="_on_area_2d_body_entered"]
@@ -4286,3 +4362,4 @@ shape = SubResource("RectangleShape2D_ot85n")
 [connection signal="body_entered" from="Area2D5" to="ParallaxBackground/ParallaxLayer/Background-2" method="_on_area_2d_5_body_entered"]
 [connection signal="body_entered" from="Area2D6" to="ParallaxBackground/ParallaxLayer/Background-2" method="_on_area_2d_6_body_entered"]
 [connection signal="body_entered" from="Area2D6" to="ParallaxBackground2/ParallaxLayer/Ground-long" method="_on_area_2d_6_body_entered"]
+[connection signal="pressed" from="Button" to="player" method="_on_button_pressed"]
